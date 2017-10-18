@@ -1,11 +1,11 @@
 from selenium import webdriver
 import unittest
 
-browser = webdriver.Chrome()
-browser.get('http://localhost:8000')
-
-assert 'Django' in browser.title
-browser.quit()
+# browser = webdriver.Chrome()
+# browser.get('http://localhost:8000')
+# 
+# assert 'To-Do' in browser.title
+# browser.quit()
 
 
 class NewVisitorTest(unittest.TestCase):
