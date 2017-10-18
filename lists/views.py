@@ -8,9 +8,8 @@ def home_page(request):
 		Item.objects.create(text=new_item_text)
 
 		return redirect('/')
-	else:
-		new_item_text=''
 
-	return render(request, 'lists/home.html', {'new_item_text':request.POST.get('item_text', '')})
+	items = Item.objects.all()
+	return render(request, 'lists/home.html', {'items': items})
 
 # Create your views here.
