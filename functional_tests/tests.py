@@ -17,7 +17,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
 
 	def setUp(self):
 		self.browser = webdriver.Chrome()
-		staging_server = os.environ.get('STAGING_SERVER') # windows CMD: FOO=BAR (variable name = variable)
+		staging_server = os.environ.get('STAGING_SERVER') # windows CMD: set FOO=BAR (variable name = variable)
 		if staging_server:
 			self.live_server_url = 'http://' + staging_server
 
