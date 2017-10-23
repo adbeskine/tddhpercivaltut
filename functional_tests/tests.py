@@ -4,6 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import WebDriverException
 import time
 import unittest
+import os
 
 # browser = webdriver.Chrome()
 # browser.get('http://localhost:8000')
@@ -16,6 +17,9 @@ class NewVisitorTest(StaticLiveServerTestCase):
 
 	def setUp(self):
 		self.browser = webdriver.Chrome()
+		staging_server = os.environ.get('STAGING_SERVER') # windows CMD: FOO=BAR (variable name = variable)
+		if staging_server:
+			self.live_server_url = 'http://' + staging_server
 
 	def tearDown(self):
 		self.browser.quit()
