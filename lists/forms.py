@@ -8,6 +8,8 @@ from lists.models import Item
 			# 'class': 'form-control input-lg',
 			# }),
 		# )
+
+
 EMPTY_ITEM_ERROR = "You can't have an empty list item"
 
 
